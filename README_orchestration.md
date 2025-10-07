@@ -1,7 +1,7 @@
-🚀 Opty - Orquestração
+Opty - Orquestração
 Este repositório contém a configuração do Docker Compose para orquestrar todos os microsserviços que compõem a aplicação Opty.
 
-📖 Sobre o Projeto
+Sobre o Projeto
 O Opty é uma aplicação web de busca de produtos que utiliza IA para entregar resultados personalizados e um poderoso comparador de preços. Esta é a camada de orquestração que une todos os serviços.
 
 Microsserviços
@@ -9,7 +9,7 @@ opty-frontend: A interface do usuário, construída com React.
 opty-backend: A API principal, construída com Python e FastAPI.
 opty-socket-server: O servidor de mensageria, construído com Java e Spring Boot.
 
-🐳 Executando o Projeto Completo
+Executando o Projeto Completo
 Pré-requisitos
 Docker
 Docker Compose
