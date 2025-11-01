@@ -1,0 +1,27 @@
+# --- Opty Deploy ---
+services:
+
+  # --- Databases ---
+  mongo:
+    image: mongo:8
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD}
+      MONGO_APP_USER: ${MONGO_APP_USER}
+      MONGO_APP_PASSWORD: ${MONGO_APP_PASSWORD}
+    volumes:
+      - ./data/mongo:/data/db
+      - ./infra/mongo-init:/docker-entrypoint-initdb.d:ro
+    networks:
+      - db-network
+    restart: unless-stopped
+
+#-- Networks ---
+networks:
+  db-network:
+    driver: bridge

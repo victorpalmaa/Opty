@@ -1,0 +1,7 @@
+# --- Opty Development Compose ---
+services:
+
+  # --- Databases ---
+  mongo:
+    ports:
+      - "27017:27017"
