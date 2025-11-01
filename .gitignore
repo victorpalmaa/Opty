@@ -1,0 +1,29 @@
+# Sensitive configuration files
+.env
+
+# Database/volume data
+data/
+
+# Logs
+*.log
+*.out
+*.err
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+
+# Linux
+*~
+
+# IDEs / Editors
+.vscode/
+.idea/
+*.iml
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
